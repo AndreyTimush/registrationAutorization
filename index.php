@@ -16,7 +16,7 @@
         <input type="password" placeholder="Введите пароль">
         <button>Войти</button>
         <p>
-            У вас нет аккаунта? - <a href="#"> Зарегистрируйтесь </a>
+            У вас нет аккаунта? - <a href="/register.php"> Зарегистрируйтесь </a>
     </form>
     
 </body>
