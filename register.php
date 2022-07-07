@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,20 +11,27 @@
 </head>
 <body>
     
-    <!-- Форма авторизации-->
+    <!-- Форма регистрации-->
 
-    <form action="" method="">
+    <form action="vendor/signup.php" method="post">
         <label>Имя</label>
-        <input type="text" placeholder="Введите имя">
+        <input type="text" name="namePerson" placeholder="Введите имя">
         <label>Почта</label>
-        <input type="email" placeholder="Введите почту">
+        <input type="email" name="emailPerson" placeholder="Введите почту">
         <label>Пароль</label>
-        <input type="password" placeholder="Введите пароль">
+        <input type="password" name="passPerson" placeholder="Введите пароль">
         <label>Подтверждение пароля</label>
-        <input type="password" placeholder="Подтвердите пароль">
+        <input type="password" name="confirmPassPerson" placeholder="Подтвердите пароль">
         <button>Регистрация</button>
         <p>
             У вас уже есть аккаунт? - <a href="/"> Авторизируйтесь </a>
+        </p>
+        <?php 
+            if ($_SESSION['message']) {
+                echo '<p class="msg"> ' . $_SESSION['message'] . ' </p>'; 
+            }
+           unset($_SESSION['message']); 
+        ?>
     </form>
     
 </body>

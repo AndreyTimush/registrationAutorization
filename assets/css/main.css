@@ -42,3 +42,11 @@ button {
     border: unset;
     cursor: pointer;
 }
+
+.msg {
+    border: 2px solid #ffa908;
+    border-radius: 3px;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
