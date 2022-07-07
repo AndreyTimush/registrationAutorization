@@ -1,5 +1,8 @@
 <?php
-     session_start();
+session_start();
+if ($_SESSION['user']) {
+   header('Location: profile.php');
+}
 ?>
 
 <!DOCTYPE html>
@@ -13,12 +16,12 @@
     
     <!-- Форма авторизации-->
 
-    <form action="" method="">
-        <label>Логин</label>
-        <input type="text" placeholder="Введите свой логин">
+    <form action="vendor/signin.php" method="post">
+        <label>email</label>
+        <input type="text" name="emailPerson" placeholder="Почта">
         <label>Пароль</label>
-        <input type="password" placeholder="Введите пароль">
-        <button>Войти</button>
+        <input type="password" name="passPerson" placeholder="Пароль">
+        <button type="submit">Войти</button>
         <p>
             У вас нет аккаунта? - <a href="/register.php"> Зарегистрируйтесь </a>
         </p>

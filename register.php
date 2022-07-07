@@ -1,5 +1,8 @@
 <?php
-    session_start();
+session_start();
+if ($_SESSION['user']) {
+    header('Location: profile.php');
+}
 ?>
 
 <!DOCTYPE html>
@@ -22,7 +25,7 @@
         <input type="password" name="passPerson" placeholder="Введите пароль">
         <label>Подтверждение пароля</label>
         <input type="password" name="confirmPassPerson" placeholder="Подтвердите пароль">
-        <button>Регистрация</button>
+        <button type="submit">Регистрация</button>
         <p>
             У вас уже есть аккаунт? - <a href="/"> Авторизируйтесь </a>
         </p>
