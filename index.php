@@ -17,7 +17,7 @@ if ($_SESSION['user']) {
     <!-- Форма авторизации-->
 
     <form action="vendor/signin.php" method="post">
-        <label>email</label>
+        <label>Почта</label>
         <input type="text" name="emailPerson" placeholder="Почта">
         <label>Пароль</label>
         <input type="password" name="passPerson" placeholder="Пароль">
