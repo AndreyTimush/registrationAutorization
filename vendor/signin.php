@@ -8,7 +8,7 @@
     echo $pass . "\n";
 
     $check_user = mysqli_query($connect, "SELECT * FROM Persons WHERE `email`='$email' AND `password` = '$pass'");
-    // echo mysqli_num_rows($check_user);
+
     if (mysqli_num_rows($check_user) > 0) {
 
         $user = mysqli_fetch_assoc($check_user);
